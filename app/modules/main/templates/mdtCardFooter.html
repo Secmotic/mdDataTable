@@ -7,7 +7,7 @@
         <span layout-margin>{{mdtTranslations.rowsPerPage}}</span>
         <md-input-container>
             <md-select ng-model="rowsPerPage" aria-label="rows per page">
-                <md-option ng-value="pageSize" ng-repeat="pageSize in mdtPaginationHelper.rowsPerPageValues">{{pageSize}}</md-option>
+                <md-option ng-value="pageSize" ng-repeat="pageSize in mdtPaginationHelper.rowsPerPageValues"><span ng-show="pageSize >= 1000000">ilimitado</span><span ng-show="pageSize < 1000000">{{pageSize}}</span></md-option>
             </md-select>
         </md-input-container>
 
